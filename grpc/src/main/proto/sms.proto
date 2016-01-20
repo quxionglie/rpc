@@ -1,0 +1,21 @@
+syntax = "proto3";
+package sms;
+
+// option java_multiple_files = true;
+option java_package = "com.quxionglie.rpc.grpc.proto";
+option java_outer_classname = "SmsProto";
+
+service SmsService {
+  rpc sendSms (SendSmsRequest) returns (SendSmsResp) {}
+}
+
+message SendSmsRequest {
+  string mobile = 1;
+  string content = 2;
+  string sign = 3;
+}
+
+message SendSmsResp {
+  int32  code = 1;
+  string msg = 2;
+}

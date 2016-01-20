@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+package tutorial;
+
+option java_package = "com.quxionglie.rpc.protobuf3.proto";
+option java_outer_classname = "UserProto";
+
+message User {
+    int32  id = 1;
+    string name = 2;
+    string img = 3;
+    string mobile = 4;
+    uint64 createAt=7;
+    int32  communityId = 5;
+    string communityName = 6;
+}

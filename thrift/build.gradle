@@ -1,0 +1,27 @@
+// start gradle-one-jar ----
+// https://github.com/rholder/gradle-one-jar
+apply plugin: 'gradle-one-jar'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+    }
+}
+
+task awesomeFunJar(type: OneJar) {
+    mainClass = 'com.quxionglie.rpc.thrift.client.SmsThriftClient'
+}
+
+// end gradle-one-jar ----
+
+dependencies {
+    compile 'org.apache.thrift:libthrift:0.9.2'
+}
+
+task copy2lib(type: Copy) {
+    from configurations.runtime
+    into "${buildDir}/deps"
+}

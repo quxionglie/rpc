@@ -1,0 +1,10 @@
+dependencies {
+    compile 'com.google.protobuf:protobuf-java:3.0.0-beta-1'
+    compile 'redis.clients:jedis:2.7.3'
+}
+
+
+task copy2lib(type: Copy) {
+    from configurations.runtime
+    into "${buildDir}/deps"
+}

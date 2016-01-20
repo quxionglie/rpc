@@ -1,0 +1,11 @@
+syntax = "proto2";
+// syntax = "proto3";
+
+option java_package = "com.quxionglie.rpc.protobuf3.proto";
+option java_outer_classname = "SearchRequestProto2";
+
+message SearchRequest {
+  required string query = 1;
+  required int32 page_number = 2;
+  required int32 result_per_page = 3;
+}

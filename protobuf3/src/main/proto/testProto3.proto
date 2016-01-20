@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_package = "com.quxionglie.rpc.protobuf3.proto";
+option java_outer_classname = "TestMsgProto3";
+
+message TestMsg {
+  string query = 1;
+  reserved "page_number";
+  int32 page_number = 2;
+  int32 result_per_page = 3;
+}

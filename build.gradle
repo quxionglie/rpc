@@ -1,0 +1,21 @@
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+
+    compileJava.options.encoding = 'UTF-8'
+    sourceCompatibility = 1.6
+    targetCompatibility = 1.6
+      
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'ch.qos.logback:logback-classic:1.1.3'
+        compile 'ch.qos.logback:logback-core:1.1.3'
+        compile 'org.slf4j:slf4j-api:1.7.12'
+        compile 'com.google.guava:guava:18.0'
+        testCompile 'junit:junit:4.8.2'
+    }
+}

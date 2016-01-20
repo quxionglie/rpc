@@ -1,0 +1,14 @@
+package tutorial;
+
+option java_package = "com.quxionglie.rpc.protobuf2.proto";
+option java_outer_classname = "UserProto";
+
+message User {
+  required int32  id = 1;
+  required string name = 2;
+  required string img = 3;
+  required string mobile = 4;
+  optional int32  communityId = 5;
+  optional string communityName = 6;
+  required uint64 createAt=7;
+}

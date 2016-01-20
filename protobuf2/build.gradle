@@ -1,0 +1,4 @@
+dependencies {
+    compile 'com.google.protobuf:protobuf-java:2.6.1'
+    compile 'redis.clients:jedis:2.7.3'
+}
